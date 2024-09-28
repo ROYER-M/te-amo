@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/Corazon.jpg" type="image/x-icon">
+    <title>TE AMO</title>
+</head>
+
+<body>
+    <div class="lovephrase">
+        <span>T</span>
+        <span>E</span>
+        <span>A</span>
+        <span>M</span>
+        <span>O</span>
+    </div>
+    <div class="description">
+        <span>&#128525💖 Tengo un regalo muy especial para ti 💖&#128525</span>
+    </div>
+    <div class="button">
+        <button class="botones">
+            <a href="index2.html" style="color: #fff;">ABRIR</a>
+        </button>
+    </div>
+    <!-- <div class="credits">
+        <p>&copy; 2024</p>
+    </div> -->
+</body>
+<body>
+    <div class="container2">
+    </div>
+<!--CORAZONES-->
+<script>
+    function hearts(){
+
+        const container2 = document.querySelector('.container2');
+
+        const creat = document.createElement('div')
+        console.log(creat);
+        creat.classList.add('hearts');
+        container2.appendChild(creat);
+        creat.style.left = Math.random() * 100 + 'vw';
+        creat.style.animationDuration = Math.random() * 10 + 2 + 's';
+
+        container2.appendChild(creat)
+        setTimeout(() => {
+            creat.remove();
+        }, 5000);
+
+        creat.innerHTML = `❤️`;
+    }
+    hearts();
+    setInterval(hearts, 100);
+</script>
+</body>
+
+</html>

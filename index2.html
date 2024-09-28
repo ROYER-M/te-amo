@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Corazon.jpg" type="image/x-icon">
+    <title>TE AMO</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <audio src="sound/TuPoeta-Alex-Campos.mp3" autoplay></audio>
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>😍 DE ROYER PARA LIZETH 😍</strong>
+                        <p>
+                            Amor quiero pedirte que seas mi novia ¿Aceptas?, pensar que antes no sabiamos de nostros
+                            y mira ahora ya no puedo vivir sin ti, quiero abrazarte y sentir tu corazon junto al mio,
+                            quiero estar contigo para siempre.
+         
+                            <center><img src="img/iloveyou.gif" alt="" width="50" height="50"/></center>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <body>
+        <div class="container2">
+        </div>
+    <!--CARTA-->
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+    
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth < 480) {
+                envelope.classList.remove('flap');
+            }
+        });
+    </script>
+    <!--CORAZONES-->
+    <script>
+        function hearts(){
+    
+            const container2 = document.querySelector('.container2');
+    
+            const creat = document.createElement('div')
+            console.log(creat);
+            creat.classList.add('hearts');
+            container2.appendChild(creat);
+            creat.style.left = Math.random() * 100 + 'vw';
+            creat.style.animationDuration = Math.random() * 10 + 2 + 's';
+    
+            container2.appendChild(creat)
+            setTimeout(() => {
+                creat.remove();
+            }, 5000);
+    
+            creat.innerHTML = `❤️`;
+        }
+        hearts();
+        setInterval(hearts, 100);
+    </script>
+</body>
+</html>
